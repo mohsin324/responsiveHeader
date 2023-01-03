@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    /* background-color: lightblue; */
+    background-color: black;
+    color: white;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    /* background-color: black; */
+    height: 50px;
+    position: fixed;
+    width: 100%;
+}
+.ul{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.ul > li{
+    list-style: none;
+}
+.link{
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 0.1rem solid white;
+    border-radius: 0.4rem;
+    margin: 00.1rem;
+    background-color: white;
+}
+.link:hover{
+    transition: ease 1s;
+    color: #fff;
+    background-color: red;
+    border: 0.1rem solid red;
+    cursor: pointer;
+}
+.link:visited{
+    color: black;
+}
+.icon{
+    display: none;
+}
+.iconBtn{
+    width: 3rem;
+    height: 3rem;
+}
+.hero{
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+}
+.main{
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer{
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightslategray;
+}
+@media (max-width: 768px) {
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        width: 100%;
+        position: fixed;
+    }
+    .icon{
+        display: block;
+        z-index: 999;
+        color: black;
+        /* border: 2px solid green; */
+    }
+    .iconBtn[name="close-outline"]{
+        display: none;
+    }
+    .header{
+        position: relative;
+    }
+    .ul{
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+        position: absolute;
+        top: 51px;
+        width: 100%;
+        position: fix;
+    }
+    .link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+        width: 100%;
+        padding: 10px;
+        margin: 0px;
+    }
+    .navbar{
+        visibility: hidden;
+    }
+    .active {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .active .navbar {
+        visibility: visible;
+    }
+    .active .icon .iconBtn[name="menu-outline"]{
+        visibility: hidden;
+        display: none;
+    }
+    .active .icon .iconBtn[name="close-outline"]{
+        display: block;
+    }
+}

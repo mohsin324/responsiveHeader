@@ -1,12 +1,8 @@
-// Getting DOM element
-const icon = document.querySelector('.icon');
-const header = document.querySelector('.header');
+const ham = document.querySelector('#header .nav-bar .nav-list .hamburger');
+const nav = document.querySelector('#header .nav-bar .nav-list nav ul');
 
-function addClass(){
-    // navBar.setAttribute('class', 'active');
-    // header.setAttribute('class', 'active');
-    header.classList.toggle('active')
+ham.addEventListener('click', ()=> {
+    nav.classList.toggle('active');
+    ham.classList.toggle('active');
 
-}
-icon.addEventListener('click', addClass);
-
+})
